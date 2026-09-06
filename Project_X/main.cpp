@@ -1,6 +1,11 @@
 #include <iostream>
 
 int main() {
-	std::cout << "Hello world";
-	return 1;
+	int a, b;
+
+	std::cin >> a >> b;
+
+	std::cout << a * b / 2;
+
+	return 0;
 }
