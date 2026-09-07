@@ -34,16 +34,18 @@ inline double Triangle::get_height() const noexcept {
 }
 
 inline void Triangle::set_side(double side) {
+
 	if (side <= 0) {
-		throw std::logic_error("Invalid side length. Must be positive number.");
+		throw std::invalid_argument("Invalid side length. Must be positive number.");
 	}
 
 	_side = side;
 }
 
 inline void Triangle::set_height(double height) {
+
 	if (height <= 0) {
-		throw std::logic_error("Invalid height length. Must be positive number.");
+		throw std::invalid_argument("Invalid height length. Must be positive number.");
 	}
 
 	_height = height;
