@@ -1,44 +1,5 @@
 #include <iostream>
-
-class Triangle {
-	double _side;
-	double _height;
-
-public:
-	Triangle(double side = 1, double height = 1) {
-		_side = side;
-		_height = height;
-	}
-
-	double calculate_area() const noexcept {
-		return _side * _height / 2;
-	}
-
-	double get_side() const noexcept {
-		return _side;
-	}
-
-	double get_height() const noexcept {
-		return _height;
-	}
-
-	void set_side(double side) {
-		if (side <= 0) {
-			throw std::logic_error("Invalid side length. Must be positive number.");
-		}
-
-		_side = side;
-	}
-
-	void set_height(double height) {
-		if (height <= 0) {
-			throw std::logic_error("Invalid height length. Must be positive number.");
-		}
-
-		_height = height;
-	}
-};
-
+#include "Triangle.h"
 
 int main() {
 	double first_side, height, area_of_triangle;
